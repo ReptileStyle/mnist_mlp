@@ -6,7 +6,6 @@ import os
 
 from sklearn.model_selection import train_test_split
 
-import data2
 import numpy as np
 # import matplotlib.pyplot as plt
 import pandas as pd
