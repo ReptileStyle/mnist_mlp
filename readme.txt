@@ -28,3 +28,6 @@ https://disk.yandex.ru/d/E0UGA4gIsThn7w
 
 лаб 21:
 смотреть папку lab21, все нужные файлы там
+
+лаб 22:
+смотреть папку lab22. Перед запуском скачать и распаковать веса YOLO в lab22 отсюда https://www.kaggle.com/datasets/shivam316/yolov3-weights
