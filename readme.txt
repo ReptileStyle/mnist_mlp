@@ -24,3 +24,7 @@ https://disk.yandex.ru/d/E0UGA4gIsThn7w
 Использование модели VGG16 сильно увеличило скорость обучения и итоговые результаты распознавания
 
 смотреть файлы lab20.py, lab20_pretrained_learning.py, augmented_training_plot.png, not_augmented_training_plot.png, transfer_learning_aug.png, transfer_learning_no_aug.png
+
+
+лаб 21:
+смотреть папку lab21, все нужные файлы там
