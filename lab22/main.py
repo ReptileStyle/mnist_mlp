@@ -155,6 +155,25 @@ def detect_objects_yolo_video(video_path, config_path, weights_path, class_names
         # Удаление повторяющихся рамок
         indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 
+        # Нарисовать рамки и подписать объекты
+        font = cv2.FONT_HERSHEY_PLAIN
+        colors = np.random.uniform(0, 255, size=(len(class_names), 3))
+
+        for i in range(len(boxes)):
+            if i in indexes:
+                x, y, w, h = boxes[i]
+                label = str(class_names[class_ids[i]])
+                color = colors[class_ids[i]]
+                cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
+                cv2.putText(frame, label, (x, y + 30), font, 2, color, 2)
+
+        # Отображение обработанного кадра
+        cv2.imshow("Video", frame)
+
+        # Остановка выполнения по нажатию клавиши 'q'
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
         # Подсчет количества объектов каждого класса на текущем кадре
         objects_count = {}
         for i in range(len(boxes)):
@@ -197,4 +216,5 @@ def detect_objects_yolo_video(video_path, config_path, weights_path, class_names
 
 video_path = 'Ferma.mp4'
 
+# Будет два показа видео: на первом с рамками у объектов. На втором будет пауза, когда появится кадр с наибольшим количеством каждого объекта
 detect_objects_yolo_video(video_path, config_path, weights_path, class_names_path)
