@@ -10,7 +10,17 @@
 
 
 лаб 20:
+
 модель для аугментированного датасета лежит в архиве
 
 для неаугментированного по ссылке скачать (не влезло в 100мб) https://disk.yandex.ru/d/4flDijBK5OxP6g
 
+Для пункта три(трансфер лернинг):
+
+https://disk.yandex.ru/d/E0UGA4gIsThn7w
+
+аугментация дает повышенную точность в итоге, но меньшую во время тренировки. Что есть хорошо
+
+Использование модели VGG16 сильно увеличило скорость обучения и итоговые результаты распознавания
+
+смотреть файлы lab20.py, lab20_pretrained_learning.py, augmented_training_plot.png, not_augmented_training_plot.png, transfer_learning_aug.png, transfer_learning_no_aug.png
